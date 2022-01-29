@@ -33,6 +33,11 @@ class ExpenseViewSet(ModelViewSet):
             print('fail')
             raise serializers.ValidationError('Expense cannot be greater than total amount')
 
+class kotlinTestViewSet(ModelViewSet):
+    serializer_class = testexpenseSerializer
+    permission_classes= [permissions.AllowAny]
+    queryset= testExpenseTracker.objects.all()
+
 
 class DashboardAPi(APIView):
     permission_classes = [

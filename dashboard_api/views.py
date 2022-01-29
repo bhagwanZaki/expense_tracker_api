@@ -1,3 +1,4 @@
+from tracemalloc import start
 from django.shortcuts import render
 from api.models import expense, totalAmount
 from rest_framework import permissions,status
@@ -46,6 +47,7 @@ class DashboardAPi(APIView):
             
             if startYear != currentYear:
                 dayList = [i for i in range(1, calendar.monthrange(dt.today().year, dt.today().month)[1]+1)]
+                startDay = 1
             else:
                 if startMonth != currentMonth:
                     startDay = 1

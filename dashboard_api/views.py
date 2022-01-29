@@ -35,7 +35,7 @@ class DashboardAPi(APIView):
             else:
                 expenseAmt+=i.amount
 
-        totalAmt += (savingAmt + incomeAmt) - expenseAmt
+        # totalAmt += (savingAmt + incomeAmt) - expenseAmt
         currentYear = dt.today().year
         currentMonth = dt.today().month
         if expenseData:

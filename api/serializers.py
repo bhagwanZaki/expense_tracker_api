@@ -6,7 +6,3 @@ class expenseSerializer(serializers.ModelSerializer):
         model = expense
         fields = '__all__'
 
-class testexpenseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = testExpenseTracker
-        fields = '__all__'

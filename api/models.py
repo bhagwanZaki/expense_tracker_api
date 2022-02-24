@@ -23,18 +23,3 @@ class totalAmount(models.Model):
 
     def __str__(self) -> str:
         return f'{self.user_linked} total amount'
-
-
-class testExpenseTracker(models.Model):
-    CHOICES = [
-        ('income','Income'),
-        ('expense','Expense'),
-        ('saving','Saving'),
-    ]    
-    title = models.CharField(max_length=100)
-    amount = models.FloatField()
-    incomeOrexpense = models.CharField(max_length=7,choices=CHOICES)
-    amount_date = models.DateField(auto_now=True)
-
-    def __str__(self) -> str:
-        return f'{self.title} record'

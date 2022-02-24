@@ -72,6 +72,7 @@ class totalAmountAPI(viewsets.ModelViewSet):
         # return self.request.user.initial.objects.all()
 
     def perform_create(self, serializer):
+        print(self.request.user)
         print('============')
         print(serializer)
         print('============')
